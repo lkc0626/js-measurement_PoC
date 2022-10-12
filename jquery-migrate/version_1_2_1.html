@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>jQuery 1.10.2 + jQMigrate 1.2.1</title>
+<script id="jq" src="http://code.jquery.com/jquery-3.4.0.js"></script>
+<script id="jqmig" src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+</head>
+<body>
+  <div id="ver"></div>
+  <script>
+    jQuery(function(){
+      $('#ver').text("jQuery " + jQuery().jquery + ", with migrate plugin " + $('#jqmig')[0].src.match(/(\d+\.\d+\.\d+)\.js/)[1]);
+      var hash = location.hash || "#<img/src='/'onerror='alert(location)'/>";
+      $("a[href=" + hash + "]").click();
+    })
+  </script>
+</body>
+</html>
